@@ -58,8 +58,8 @@
          </children>
       </Pane>
       <ScrollPane layoutX="213.0" prefHeight="704.0" prefWidth="590.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="702.0" prefWidth="589.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="702.0" prefWidth="589.0">
                <children>
                   <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="114.0" prefWidth="553.0" style="-fx-background-color: #e7f0fe;">
                      <children>
@@ -89,11 +89,11 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-        </content>
+         </content>
       </ScrollPane>
       <ScrollPane layoutX="803.0" layoutY="45.0" prefHeight="593.0" prefWidth="200.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="635.0" prefWidth="200.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="635.0" prefWidth="200.0">
                <children>
                   <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="82.0" prefWidth="165.0" style="-fx-background-color: #e7f0fe;">
                      <children>
@@ -109,7 +109,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-        </content>
+         </content>
       </ScrollPane>
       <Button layoutX="803.0" layoutY="636.0" mnemonicParsing="false" prefHeight="69.0" prefWidth="200.0" text="ยืนยัน">
          <font>
