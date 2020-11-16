@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.Home">
+   <children>
+      <TableView layoutX="45.0" layoutY="69.0" prefHeight="586.0" prefWidth="710.0">
+        <columns>
+          <TableColumn prefWidth="87.0" text="รหัสสินค้า" />
+          <TableColumn prefWidth="183.0" text="ชื่อสินค้า" />
+            <TableColumn prefWidth="64.0" text="ราคา" />
+            <TableColumn prefWidth="64.0" text="หน่วย" />
+            <TableColumn prefWidth="79.0" text="safety stock" />
+            <TableColumn prefWidth="85.0" text="shelf id" />
+            <TableColumn prefWidth="147.0" text="รูป" />
+        </columns>
+      </TableView>
+      <Label layoutX="47.0" layoutY="23.0" prefHeight="23.0" prefWidth="137.0" text="สินค้าทั้งหมด">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
