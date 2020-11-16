@@ -2,15 +2,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.Home">
    <children>
@@ -61,94 +61,28 @@
       <TabPane layoutX="213.0" prefHeight="704.0" prefWidth="587.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="รับสินค้าเข้า">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="674.0" prefWidth="587.0">
-                     <children>
-                        <ScrollPane prefHeight="668.0" prefWidth="587.0">
-                          <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="681.0" prefWidth="587.0">
-                                 <children>
-                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="114.0" prefWidth="553.0" style="-fx-background-color: #e7f0fe;">
-                                       <children>
-                                          <ImageView fitHeight="119.0" fitWidth="120.0" pickOnBounds="true">
-                                             <image>
-                                                <Image url="@../images/product_preview.jpg" />
-                                             </image>
-                                          </ImageView>
-                                          <Text layoutX="150.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ชื่อสินค้า : หมอน">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Text>
-                                          <Text layoutX="150.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="รหัสสินค้า : hw001">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Text>
-                                          <Button layoutX="446.0" layoutY="63.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="84.0" text="ไม่อนุมัติ">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Button>
-                                          <Button layoutX="446.0" layoutY="12.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="84.0" text="อนุมัติ">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Button>
-                                       </children>
-                                    </AnchorPane>
-                                 </children>
-                              </AnchorPane>
-                          </content>
-                        </ScrollPane>
-                     </children>
-                  </AnchorPane>
-            </content>
+               <content>
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="รหัสสินค้า" />
+                      <TableColumn prefWidth="285.0" text="ชื่อ" />
+                        <TableColumn prefWidth="120.0" text="อนุมัติ(ปุ่ม)" />
+                        <TableColumn prefWidth="107.0" text="ไม่อนุมัติ(ปุ่ม)" />
+                    </columns>
+                  </TableView>
+               </content>
           </Tab>
           <Tab text="นำสินค้าออก">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <ScrollPane prefHeight="668.0" prefWidth="587.0">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="681.0" prefWidth="587.0">
-                                 <children>
-                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="114.0" prefWidth="553.0" style="-fx-background-color: #e7f0fe;">
-                                       <children>
-                                          <ImageView fitHeight="119.0" fitWidth="120.0" pickOnBounds="true">
-                                             <image>
-                                                <Image url="@../images/product_preview.jpg" />
-                                             </image>
-                                          </ImageView>
-                                          <Text layoutX="150.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ชื่อสินค้า : หมอน2">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Text>
-                                          <Text layoutX="150.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="รหัสสินค้า : hw002">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Text>
-                                          <Button layoutX="446.0" layoutY="63.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="84.0" text="ไม่อนุมัติ">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Button>
-                                          <Button layoutX="446.0" layoutY="12.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="84.0" text="อนุมัติ">
-                                             <font>
-                                                <Font size="14.0" />
-                                             </font>
-                                          </Button>
-                                       </children>
-                                    </AnchorPane>
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </ScrollPane>
-                     </children>
-                  </AnchorPane>
-            </content>
+               <content>
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="รหัสสินค้า" />
+                        <TableColumn prefWidth="285.0" text="ชื่อ" />
+                        <TableColumn minWidth="0.0" prefWidth="116.0" text="อนุมัติ(ปุ่ม)" />
+                        <TableColumn prefWidth="111.0" text="ไม่อนุมัติ(ปุ่ม)" />
+                     </columns>
+                  </TableView>
+               </content>
           </Tab>
         </tabs>
       </TabPane>
