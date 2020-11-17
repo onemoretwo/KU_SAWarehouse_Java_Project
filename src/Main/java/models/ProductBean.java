@@ -27,7 +27,7 @@ public class ProductBean {
         this.quantity = new SimpleIntegerProperty(product.getQuantity());
         this.saftyStock = new SimpleIntegerProperty(product.getSaftyStock());
         this.shelf_id = new SimpleStringProperty(product.getShelf_id());
-        this.img = new ImageView(new Image(new File("FoodImage/" + product.getImgName()).toURI().toString()));
+        this.img = new ImageView(new Image(new File(getClass().getClassLoader().getResource("images/null.jpg").getPath()).toURI().toString()));
         img.setFitHeight(60);
         img.setFitWidth(60);
     }

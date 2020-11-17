@@ -40,4 +40,28 @@ public class MenuBtn {
         stage.setScene(new Scene(root1));
         stage.show();
     }
+
+    @FXML
+    public void homeBtn(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/home.fxml"));
+        Scene scene = new Scene(loader.load());
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+    }
+
+    @FXML
+    public void addOldBtn(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/addOld.fxml"));
+        Scene scene = new Scene(loader.load());
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+    }
+
+    @FXML
+    public void requisitionBtn(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/requisition.fxml"));
+        Scene scene = new Scene(loader.load());
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+    }
 }

@@ -30,7 +30,7 @@ public class UserDB extends DBConnection{
                 } return null;
             }
         } catch (SQLException throwables) {
-            System.out.println("error");
+            throwables.printStackTrace();
         }
 
         return null;

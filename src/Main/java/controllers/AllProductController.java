@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 
 public class AllProductController implements Initializable {
 
-    ObservableList observableList;
+    ObservableList<ProductBean> observableList;
     ProductDB productDB;
 
     @FXML

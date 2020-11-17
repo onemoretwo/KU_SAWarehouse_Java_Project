@@ -20,9 +20,16 @@ public class HomeController extends MenuBtn implements Initializable {
 
     @FXML
     private Label srole, sname, susername, sage, semail, stelephoneNumber, screated_at;
+    @FXML
+    private Button declarationConfirm, declarationWait;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if (Main.currentUser.getRole().equals("Staff")){
+            declarationConfirm.setVisible(false);
+        }else if (Main.currentUser.getRole().equals("Manager")){
+            declarationWait.setVisible(false);
+        }
         setUserDetail(Main.currentUser);
     }
 

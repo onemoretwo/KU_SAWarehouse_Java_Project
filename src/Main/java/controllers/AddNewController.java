@@ -2,6 +2,7 @@ package Main.java.controllers;
 
 import Main.java.DatabaseService.CategoryDB;
 import Main.java.DatabaseService.ProductDB;
+import Main.java.Main;
 import Main.java.contents.MenuBtn;
 import Main.java.models.Category;
 import Main.java.models.Product;
@@ -28,9 +29,15 @@ public class AddNewController extends MenuBtn implements Initializable {
 
     @FXML private TextField fname, fid, funit, fprice, fsaftystock;
     @FXML private ComboBox fshelf_id, ftype;
+    @FXML private Button declarationConfirm, declarationWait;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        if (Main.currentUser.getRole().equals("Staff")){
+            declarationConfirm.setVisible(false);
+        }else if (Main.currentUser.getRole().equals("Manager")){
+            declarationWait.setVisible(false);
+        }
         //category setup
         ftype.setPromptText("Category");
         list = new CategoryDB().getAllType();
@@ -41,12 +48,6 @@ public class AddNewController extends MenuBtn implements Initializable {
         fshelf_id.setPromptText("Shelf Id");
         ObservableList<String> options = FXCollections.observableArrayList("A1","A2","A3","A4","A5","A6","A7","A8");
         fshelf_id.setItems(options);
-
-        //check product
-        ArrayList<Product> list = new ProductDB().getAllProduct();
-        for (Product p : list){
-            System.out.println(p);
-        }
     }
 
     private void clear(){

@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AddOldController">
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AddOldController">
    <children>
-      <Button layoutX="806.0" layoutY="636.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="292.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="ยืนยัน" textFill="WHITE">
+      <Button layoutX="806.0" layoutY="636.0" mnemonicParsing="false" onAction="#submitBtn" prefHeight="68.0" prefWidth="292.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="ยืนยัน" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -22,31 +22,31 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TableView layoutX="213.0" prefHeight="708.0" prefWidth="591.0">
+      <TableView fx:id="aTable" layoutX="213.0" prefHeight="708.0" prefWidth="591.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="รูป" />
-            <TableColumn prefWidth="118.0" text="รหัสสินค้า" />
-          <TableColumn prefWidth="193.0" text="ชื่อ" />
-            <TableColumn prefWidth="96.0" text="จำนวน" />
-            <TableColumn prefWidth="108.0" text="เพิ่มสินค้า(ปุ่ม)" />
+          <TableColumn fx:id="imgACol" prefWidth="154.33334350585938" text="รูป" />
+            <TableColumn fx:id="idACol" prefWidth="85.66665649414062" text="รหัสสินค้า" />
+          <TableColumn fx:id="nameACol" prefWidth="169.0" text="ชื่อ" />
+            <TableColumn fx:id="quantityACol" prefWidth="88.66668701171875" text="จำนวน" />
+            <TableColumn fx:id="btnACol" prefWidth="95.33331298828125" text="เพิ่มสินค้า(ปุ่ม)" />
         </columns>
       </TableView>
-      <TableView layoutX="803.0" layoutY="42.0" prefHeight="594.0" prefWidth="298.0">
+      <TableView fx:id="bTable" layoutX="803.0" layoutY="42.0" prefHeight="594.0" prefWidth="298.0">
         <columns>
-          <TableColumn prefWidth="95.0" text="รูป" />
-          <TableColumn prefWidth="71.0" text="ชื่อ" />
-            <TableColumn prefWidth="54.0" text="จำนวน" />
-            <TableColumn prefWidth="77.0" text="ยกเลิก(ปุ่ม)" />
+          <TableColumn fx:id="imgBCol" prefWidth="86.66668701171875" text="รูป" />
+          <TableColumn fx:id="nameBCol" prefWidth="81.66668701171875" text="ชื่อ" />
+            <TableColumn fx:id="quantityBCol" prefWidth="55.00006103515625" text="จำนวน" />
+            <TableColumn fx:id="btnBCol" prefWidth="76.99993896484375" />
         </columns>
       </TableView>
       <Pane layoutY="-3.0" prefHeight="711.0" prefWidth="213.0" style="-fx-background-color: #3498db;">
          <children>
-            <Button layoutY="439.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="allProductBtn" layoutY="439.0" mnemonicParsing="false" onAction="#allProductBtn" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="declarationWait" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -56,27 +56,27 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="248.0" mnemonicParsing="false" onAction="#addNewBtn" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutY="299.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Button disable="true" layoutY="299.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="declarationConfirm" layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutY="370.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="370.0" mnemonicParsing="false" onAction="#requisitionBtn" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="13.0" layoutY="46.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
+            <Button layoutX="13.0" layoutY="46.0" mnemonicParsing="false" onAction="#homeBtn" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
                <graphic>
                   <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>

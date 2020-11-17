@@ -64,4 +64,31 @@ public class ProductDB extends DBConnection{
         }
         return true;
     }
+
+    public void updateStock(int import_id){
+        try {
+            Statement stmt = connection.createStatement();
+            PreparedStatement update = connection.prepareStatement("UPDATE products SET quantity = ? WHERE id = ?");
+            Statement find = connection.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM importdetail WHERE import_id="+import_id);
+            while (rs.next()){
+                String product_id = rs.getString("product_id");
+                int quantity = rs.getInt("quantity");
+                ResultSet rsProduct = find.executeQuery("SELECT * FROM products WHERE id = \""+product_id+"\"");
+                int oldQuantity = 0;
+                if (rsProduct.next()){
+                    oldQuantity = rsProduct.getInt("quantity");
+                }
+                int totalQuantity = quantity + oldQuantity;
+                update.setInt(1, totalQuantity);
+                update.setString(2, product_id);
+                update.executeUpdate();
+            }
+            stmt.close();
+            find.close();
+            update.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
 }
