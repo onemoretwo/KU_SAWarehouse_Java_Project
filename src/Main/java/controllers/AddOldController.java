@@ -1,5 +1,4 @@
 package Main.java.controllers;
 
-public class Controller {
-
+public class AddOldController {
 }

@@ -1,6 +1,8 @@
 package Main.java;
 
-import Main.java.models.DBConnection;
+import Main.java.DatabaseService.DBConnection;
+import Main.java.DatabaseService.UserDB;
+import Main.java.models.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,12 +13,15 @@ import java.sql.ResultSet;
 
 public class Main extends Application {
 
+    public static User currentUser;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/addNew.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 800, 700));
         primaryStage.show();
+
         DBConnection dbConnection = new DBConnection();
         ResultSet rs = dbConnection.getAllRow("users");
         while(rs.next()){

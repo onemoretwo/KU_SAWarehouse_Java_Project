@@ -1,10 +1,10 @@
-package Main.java.models;
+package Main.java.DatabaseService;
 
 import java.sql.*;
 
 public class DBConnection {
 
-    private Connection connection;
+    protected Connection connection;
 
     public DBConnection(){
         try {
