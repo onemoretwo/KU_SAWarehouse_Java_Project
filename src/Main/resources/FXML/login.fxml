@@ -9,22 +9,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #3498db;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.LoginController">
    <children>
-      <TextField fx:id="fusername" layoutX="177.0" layoutY="188.0" prefHeight="25.0" prefWidth="286.0" />
-      <Button layoutX="177.0" layoutY="278.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="31.0" prefWidth="286.0" text="Login">
+      <TextField fx:id="fusername" layoutX="196.0" layoutY="179.0" prefHeight="25.0" prefWidth="286.0">
          <font>
-            <Font size="15.0" />
+            <Font size="14.0" />
+         </font></TextField>
+      <Button layoutX="196.0" layoutY="289.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="35.0" prefWidth="286.0" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Login" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="151.0" fitWidth="369.0" layoutX="113.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="151.0" fitWidth="369.0" layoutX="116.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/logo.png" />
          </image>
       </ImageView>
-      <Button layoutX="537.0" layoutY="361.0" mnemonicParsing="false" text="ผู้จัดทำ" />
-      <Label layoutX="113.0" layoutY="192.0" text="Username :" />
-      <Label layoutX="115.0" layoutY="233.0" text="Password :" />
-      <PasswordField fx:id="fpassword" layoutX="177.0" layoutY="229.0" prefHeight="25.0" prefWidth="286.0" />
+      <Button layoutX="527.0" layoutY="348.0" mnemonicParsing="false" style="-fx-background-radius: 5em;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="ผู้จัดทำ" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="93.0" layoutY="178.0" text="Username :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <PasswordField fx:id="fpassword" layoutX="196.0" layoutY="231.0" prefHeight="25.0" prefWidth="286.0">
+         <font>
+            <Font size="14.0" />
+         </font></PasswordField>
+      <Label layoutX="95.0" layoutY="233.0" text="Password :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

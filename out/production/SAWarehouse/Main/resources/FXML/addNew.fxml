@@ -10,8 +10,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AddNewController">
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AddNewController">
    <children>
+<<<<<<< HEAD
       <Pane layoutY="-7.0" prefHeight="711.0" prefWidth="213.0" style="-fx-background-color: #4287f5;">
          <children>
             <ImageView fitHeight="141.0" fitWidth="154.0" layoutX="36.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
@@ -61,6 +62,8 @@
             </Button>
          </children>
       </Pane>
+=======
+>>>>>>> 014b4e6968a55ef70413126f141515f2a31b00c2
       <AnchorPane layoutX="213.0" prefHeight="704.0" prefWidth="588.0">
          <children>
             <Label layoutX="29.0" layoutY="27.0" text="เพิ่มสินค้าใหม่">
@@ -98,7 +101,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button layoutX="410.0" layoutY="238.0" mnemonicParsing="false" text="เพิ่มรูปภาพ" />
+            <Button layoutX="410.0" layoutY="238.0" mnemonicParsing="false" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="เพิ่มรูปภาพ" textFill="WHITE" />
             <TextField fx:id="fid" layoutX="208.0" layoutY="422.0" prefHeight="25.0" prefWidth="271.0" />
             <TextField fx:id="fprice" layoutX="208.0" layoutY="459.0" prefHeight="19.0" prefWidth="271.0" />
             <ImageView fitHeight="161.0" fitWidth="177.0" layoutX="206.0" layoutY="102.0" pickOnBounds="true">
@@ -109,8 +112,8 @@
             <TextField fx:id="funit" layoutX="208.0" layoutY="495.0" prefHeight="25.0" prefWidth="271.0" />
             <TextField fx:id="fname" layoutX="208.0" layoutY="332.0" prefHeight="18.0" prefWidth="271.0" />
             <TextField fx:id="fsaftystock" layoutX="206.0" layoutY="532.0" prefHeight="25.0" prefWidth="271.0" />
-            <Button layoutX="206.0" layoutY="632.0" mnemonicParsing="false" onAction="#addBtn" prefHeight="50.0" prefWidth="106.0" text="เพิ่มสินค้า" />
-            <Button layoutX="373.0" layoutY="632.0" mnemonicParsing="false" onAction="#clearBtn" prefHeight="50.0" prefWidth="106.0" text="Clear" />
+            <Button layoutX="206.0" layoutY="632.0" mnemonicParsing="false" onAction="#addBtn" prefHeight="50.0" prefWidth="106.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้า" textFill="WHITE" />
+            <Button layoutX="373.0" layoutY="632.0" mnemonicParsing="false" onAction="#clearBtn" prefHeight="50.0" prefWidth="106.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Clear" textFill="WHITE" />
             <ComboBox fx:id="fshelf_id" layoutX="206.0" layoutY="570.0" prefHeight="25.0" prefWidth="271.0" />
             <Label layoutX="103.0" layoutY="376.0" text="ประเภทสินค้า">
                <font>
@@ -120,5 +123,53 @@
             <ComboBox fx:id="ftype" layoutX="208.0" layoutY="377.0" prefHeight="25.0" prefWidth="271.0" />
          </children>
       </AnchorPane>
+      <Pane layoutY="-3.0" prefHeight="711.0" prefWidth="213.0" style="-fx-background-color: #3498db;">
+         <children>
+            <Button layoutY="439.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutY="655.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="56.0" prefWidth="213.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Logout" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutY="299.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutY="370.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutX="13.0" layoutY="46.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
+               <graphic>
+                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo_min.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
