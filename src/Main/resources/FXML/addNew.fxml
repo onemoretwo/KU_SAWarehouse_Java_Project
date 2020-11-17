@@ -20,12 +20,12 @@
                   <Image url="@../images/logo_min.png" />
                </image>
             </ImageView>
-            <Button layoutY="376.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="เช็คของ">
+            <Button layoutY="439.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="เช็คของ">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutY="427.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="รายการรออนุมัติ">
+            <Button layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="รายการรออนุมัติ">
                <font>
                   <Font size="20.0" />
                </font>
@@ -50,7 +50,12 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutY="478.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="รายการต้องอนุมัติ">
+            <Button layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="รายการต้องอนุมัติ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button layoutY="370.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="นำสินค้าออก">
                <font>
                   <Font size="20.0" />
                </font>
