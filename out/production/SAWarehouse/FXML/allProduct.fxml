@@ -6,17 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AllProductController">
+<AnchorPane prefHeight="700.0" prefWidth="907.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AllProductController">
    <children>
-      <TableView layoutX="45.0" layoutY="69.0" prefHeight="586.0" prefWidth="710.0">
+      <TableView fx:id="productTable" layoutX="45.0" layoutY="69.0" prefHeight="586.0" prefWidth="821.0">
         <columns>
-          <TableColumn prefWidth="87.0" text="รหัสสินค้า" />
-          <TableColumn prefWidth="183.0" text="ชื่อสินค้า" />
-            <TableColumn prefWidth="64.0" text="ราคา" />
-            <TableColumn prefWidth="64.0" text="หน่วย" />
-            <TableColumn prefWidth="79.0" text="safety stock" />
-            <TableColumn prefWidth="85.0" text="shelf id" />
-            <TableColumn prefWidth="147.0" text="รูป" />
+          <TableColumn fx:id="idCol" prefWidth="74.0" text="รหัสสินค้า" />
+          <TableColumn fx:id="nameCol" prefWidth="184.0" text="ชื่อสินค้า" />
+            <TableColumn fx:id="priceCol" prefWidth="76.0" text="ราคา" />
+            <TableColumn fx:id="unitCol" prefWidth="72.0" text="หน่วย" />
+            <TableColumn fx:id="quantityCol" prefWidth="87.0" text="จำนวนคงเหลือ" />
+            <TableColumn fx:id="saftyStockCol" prefWidth="84.0" text="safety stock" />
+            <TableColumn fx:id="shelf_idCol" prefWidth="77.0" text="shelf id" />
+            <TableColumn fx:id="imgCol" prefWidth="165.0" text="รูป" />
         </columns>
       </TableView>
       <Label layoutX="47.0" layoutY="23.0" prefHeight="23.0" prefWidth="137.0" text="สินค้าทั้งหมด">

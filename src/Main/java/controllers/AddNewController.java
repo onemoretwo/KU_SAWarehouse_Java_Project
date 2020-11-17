@@ -2,6 +2,7 @@ package Main.java.controllers;
 
 import Main.java.DatabaseService.CategoryDB;
 import Main.java.DatabaseService.ProductDB;
+import Main.java.contents.MenuBtn;
 import Main.java.models.Category;
 import Main.java.models.Product;
 import javafx.collections.FXCollections;
@@ -21,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
-public class AddNewController implements Initializable {
+public class AddNewController extends MenuBtn implements Initializable {
 
     private ArrayList<Category> list;
 
@@ -48,14 +49,18 @@ public class AddNewController implements Initializable {
         }
     }
 
-    @FXML
-    public void clearBtn(){
+    private void clear(){
         fname.clear();
         fid.clear();
         funit.clear();
         fprice.clear();
         fsaftystock.clear();
         fshelf_id.getItems().clear();
+    }
+
+    @FXML
+    public void clearBtn(){
+        clear();
     }
 
     @FXML
@@ -76,10 +81,11 @@ public class AddNewController implements Initializable {
             }
         }
         Product product = new Product(fid.getText(), category_id, fname.getText(), 0, funit.getText(), Double.parseDouble(fprice.getText()),
-                                        Integer.parseInt(fsaftystock.getText()), "สินค้าหมด", "null");
+                                        Integer.parseInt(fsaftystock.getText()), "สินค้าหมด", fshelf_id.getValue().toString(), "null.jpg");
         if (!new ProductDB().createNewProduct(product)){
             Alert alert1 = new Alert(Alert.AlertType.INFORMATION, "เพิ่มสินค้าสำเร็จ");
             alert1.show();
+            clear();
         }else{
             Alert alert2 = new Alert(Alert.AlertType.INFORMATION, "รหัสสินค้าซ้ำไม่สามารถสร้างรายการใหม่ได้\n\nโปรดกำหนดรหัสสินค้าใหม่");
             alert2.show();

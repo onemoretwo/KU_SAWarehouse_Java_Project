@@ -105,7 +105,7 @@
                   <Image url="@../images/logo_min.png" />
                </image>
             </ImageView>
-            <Button layoutY="439.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="เช็คของ">
+            <Button layoutY="439.0" mnemonicParsing="false" onAction="#allProductBtn" prefHeight="40.0" prefWidth="213.0" text="เช็คของ">
                <font>
                   <Font size="20.0" />
                </font>
@@ -125,7 +125,7 @@
                   <Font size="19.0" />
                </font>
             </Label>
-            <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" text="เพิ่มสินค้าใหม่">
+            <Button layoutY="248.0" mnemonicParsing="false" onAction="#addNewBtn" prefHeight="40.0" prefWidth="213.0" text="เพิ่มสินค้าใหม่">
                <font>
                   <Font size="20.0" />
                </font>

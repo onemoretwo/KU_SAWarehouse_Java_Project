@@ -1,6 +1,7 @@
 package Main.java.controllers;
 
 import Main.java.Main;
+import Main.java.contents.MenuBtn;
 import Main.java.models.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,7 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class HomeController implements Initializable {
+public class HomeController extends MenuBtn implements Initializable {
 
     @FXML
     private Label srole, sname, susername, sage, semail, stelephoneNumber, screated_at;
@@ -36,33 +37,8 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    public void logoutBtn(ActionEvent event) throws IOException {
-        Main.currentUser = null;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/login.fxml"));
-        Scene scene = new Scene(loader.load());
-        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-    }
-
-    @FXML
-    public void addNewBtn(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/addNew.fxml"));
-        Scene scene = new Scene(loader.load());
-        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-    }
-
-    @FXML
     public void addOldBtn(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/addOld.fxml"));
-        Scene scene = new Scene(loader.load());
-        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
-        stage.setScene(scene);
-    }
-
-    @FXML
-    public void allProductBtn(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/allProduct.fxml"));
         Scene scene = new Scene(loader.load());
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         stage.setScene(scene);

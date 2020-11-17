@@ -8,10 +8,11 @@ public class Product {
     private String unit;
     private double price;
     private int saftyStock;
+    private String shelf_id;
     private String status;
     private String imgName;
 
-    public Product(String id, int category_id, String name, int quantity, String unit, double price, int saftyStock, String status, String imgName) {
+    public Product(String id, int category_id, String name, int quantity, String unit, double price, int saftyStock, String status, String shelf_id, String imgName) {
         this.id = id;
         this.category_id = category_id;
         this.name = name;
@@ -19,6 +20,7 @@ public class Product {
         this.unit = unit;
         this.price = price;
         this.saftyStock = saftyStock;
+        this.shelf_id = shelf_id;
         this.status = status;
         this.imgName = imgName;
     }
@@ -51,6 +53,10 @@ public class Product {
         return saftyStock;
     }
 
+    public String getShelf_id() {
+        return shelf_id;
+    }
+
     public int getStatus() {
         if (status.equals("สินค้าหมด")) return 1;
         else if (status.equals("เหลือน้อย")) return 2;
@@ -72,6 +78,7 @@ public class Product {
                 ", unit='" + unit + '\'' +
                 ", price=" + price +
                 ", saftyStock=" + saftyStock +
+                ", shelf_id='" + shelf_id + '\'' +
                 ", status='" + status + '\'' +
                 ", imgName='" + imgName + '\'' +
                 '}';
