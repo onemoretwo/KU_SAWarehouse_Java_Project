@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.Home">
+<AnchorPane prefHeight="702.0" prefWidth="208.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.Home">
    <children>
       <AnchorPane layoutX="213.0" layoutY="-1.0" prefHeight="699.0" prefWidth="588.0">
          <children>
-            <TableView layoutY="2.0" prefHeight="704.0" prefWidth="891.0">
+            <TableView prefHeight="710.0" prefWidth="891.0">
               <columns>
                 <TableColumn prefWidth="106.0" text="รูป" />
                 <TableColumn prefWidth="199.0" text="ชื่อ" />
@@ -29,37 +29,37 @@
          <children>
             <Button layoutY="439.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Button>
             <Button layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Button>
             <Button layoutY="655.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="56.0" prefWidth="213.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Logout" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Button>
             <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Button>
             <Button layoutY="299.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Button>
             <Button layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Button>
             <Button layoutY="370.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Button>
             <Button layoutX="13.0" layoutY="46.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
