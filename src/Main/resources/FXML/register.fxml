@@ -11,108 +11,108 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.Home">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.Home">
    <children>
-      <AnchorPane layoutX="213.0" layoutY="-1.0" prefHeight="699.0" prefWidth="588.0">
+      <AnchorPane layoutX="213.0" layoutY="-1.0" prefHeight="600.0" prefWidth="588.0">
          <children>
-            <AnchorPane layoutX="23.0" layoutY="19.0" prefHeight="656.0" prefWidth="543.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 30 30 30 30;">
+            <AnchorPane layoutX="23.0" layoutY="19.0" prefHeight="550.0" prefWidth="543.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 30 30 30 30;">
                <children>
-                  <Label layoutX="219.0" layoutY="14.0" text="สร้างบัญชี">
+                  <Label layoutX="219.0" layoutY="14.0" text="สร้างบัญชี" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="193.0" layoutY="270.0" prefHeight="25.0" prefWidth="264.0" />
-                  <Label layoutX="90.0" layoutY="269.0" text="ชื่อ :">
+                  <TextField layoutX="192.0" layoutY="215.0" prefHeight="25.0" prefWidth="264.0" />
+                  <Label layoutX="89.0" layoutY="215.0" text="ชื่อ :" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label layoutX="90.0" layoutY="315.0" text="อายุ :">
+                  <Label layoutX="89.0" layoutY="248.0" text="อายุ :" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="193.0" layoutY="316.0" prefHeight="25.0" prefWidth="264.0" />
-                  <Label layoutX="90.0" layoutY="358.0" text="Username :">
+                  <TextField layoutX="192.0" layoutY="248.0" prefHeight="25.0" prefWidth="264.0" />
+                  <Label layoutX="89.0" layoutY="281.0" text="Username :" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="193.0" layoutY="359.0" prefHeight="25.0" prefWidth="264.0" />
-                  <Label layoutX="90.0" layoutY="396.0" text="Password :">
+                  <TextField layoutX="192.0" layoutY="281.0" prefHeight="25.0" prefWidth="264.0" />
+                  <Label layoutX="89.0" layoutY="314.0" text="Password :" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="193.0" layoutY="397.0" prefHeight="25.0" prefWidth="264.0" />
-                  <Label layoutX="90.0" layoutY="431.0" text="ตำแหน่ง :">
+                  <TextField layoutX="192.0" layoutY="314.0" prefHeight="25.0" prefWidth="264.0" />
+                  <Label layoutX="89.0" layoutY="347.0" text="ตำแหน่ง :" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <SplitMenuButton layoutX="193.0" layoutY="432.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="264.0">
+                  <SplitMenuButton layoutX="192.0" layoutY="347.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="264.0">
                     <items>
                       <MenuItem mnemonicParsing="false" text="Staff" />
                       <MenuItem mnemonicParsing="false" text="Manager" />
                         <MenuItem mnemonicParsing="false" text="Admin" />
                     </items>
                   </SplitMenuButton>
-                  <Label layoutX="90.0" layoutY="479.0" text="เบอร์โทร :">
+                  <Label layoutX="89.0" layoutY="380.0" text="เบอร์โทร :" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="193.0" layoutY="480.0" prefHeight="25.0" prefWidth="264.0" />
-                  <TextField layoutX="193.0" layoutY="516.0" prefHeight="25.0" prefWidth="264.0" />
-                  <Label layoutX="90.0" layoutY="515.0" text="email :">
+                  <TextField layoutX="192.0" layoutY="380.0" prefHeight="25.0" prefWidth="264.0" />
+                  <TextField layoutX="192.0" layoutY="413.0" prefHeight="25.0" prefWidth="264.0" />
+                  <Label layoutX="89.0" layoutY="413.0" text="email :" textAlignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="193.0" layoutY="567.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="106.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="สร้างบัญชี" textFill="WHITE">
+                  <Button layoutX="192.0" layoutY="473.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="106.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="สร้างบัญชี" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button layoutX="351.0" layoutY="567.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="106.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Clear" textFill="WHITE">
+                  <Button layoutX="351.0" layoutY="473.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="106.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Clear" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="148.0" fitWidth="141.0" layoutX="202.0" layoutY="84.0" pickOnBounds="true">
+                  <ImageView fitHeight="148.0" fitWidth="141.0" layoutX="201.0" layoutY="49.0" pickOnBounds="true">
                      <image>
                         <Image url="@../images/icons8_user_96px.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="368.0" layoutY="194.0" mnemonicParsing="false" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="เลือกรูปภาพ" textFill="WHITE" />
+                  <Button layoutX="351.0" layoutY="172.0" mnemonicParsing="false" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="เลือกรูปภาพ" textAlignment="CENTER" textFill="WHITE" />
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Pane layoutY="-7.0" prefHeight="711.0" prefWidth="213.0" style="-fx-background-color: #3498db;">
+      <Pane prefHeight="600.0" prefWidth="214.0" style="-fx-background-color: #3498db;">
          <children>
-            <Button layoutY="655.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="56.0" prefWidth="213.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Logout" textFill="WHITE">
+            <Button layoutY="544.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="56.0" prefWidth="214.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Logout" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="ดูบัญชีทั้งหมด" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="195.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="ดูบัญชีทั้งหมด" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="299.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="สร้างบัญชีใหม่" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="สร้างบัญชีใหม่" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="370.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="301.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="13.0" layoutY="46.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
+            <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
                <graphic>
                   <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>
