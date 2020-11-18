@@ -25,6 +25,12 @@ public class Product {
         this.imgName = imgName;
     }
 
+    public Product(String id, String name, int quantity) {
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+    }
+
     public String getId() {
         return id;
     }

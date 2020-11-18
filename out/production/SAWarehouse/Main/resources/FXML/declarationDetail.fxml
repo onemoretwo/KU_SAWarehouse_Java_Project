@@ -6,18 +6,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="907.0" style="-fx-background-color: #e6e6e6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AllProductController">
+<AnchorPane prefHeight="700.0" prefWidth="907.0" style="-fx-background-color: #e6e6e6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.DeclarationDetailController">
    <children>
       <Label layoutX="47.0" layoutY="23.0" prefHeight="23.0" prefWidth="137.0" text="รายละเอียด">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TableView layoutX="45.0" layoutY="69.0" prefHeight="586.0" prefWidth="821.0">
+      <TableView fx:id="table" layoutX="45.0" layoutY="69.0" prefHeight="586.0" prefWidth="821.0">
          <columns>
-            <TableColumn prefWidth="235.0" text="รหัสสินค้า" />
-            <TableColumn prefWidth="350.0" text="ชื่อสินค้า" />
-            <TableColumn prefWidth="235.0" text="จำวนวน" />
+            <TableColumn fx:id="idCol" prefWidth="235.0" text="รหัสสินค้า" />
+            <TableColumn fx:id="nameCol" prefWidth="350.0" text="ชื่อสินค้า" />
+            <TableColumn fx:id="quantityCol" prefWidth="235.0" text="จำวนวน" />
          </columns>
       </TableView>
    </children>
