@@ -155,7 +155,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="declarationConfirm" layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="declarationConfirm" layoutY="541.0" mnemonicParsing="false" onAction="#declarationConfirm" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>

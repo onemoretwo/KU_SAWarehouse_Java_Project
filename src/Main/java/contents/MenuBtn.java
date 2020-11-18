@@ -72,4 +72,12 @@ public class MenuBtn {
         Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
     }
+
+    @FXML
+    public void declarationConfirm(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/declarationConfirm.fxml"));
+        Scene scene = new Scene(loader.load());
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+    }
 }

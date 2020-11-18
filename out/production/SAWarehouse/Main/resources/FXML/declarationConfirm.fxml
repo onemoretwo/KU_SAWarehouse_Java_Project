@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.DeclarationConfirmController">
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.DeclarationConfirmController">
    <children>
       <TabPane layoutX="213.0" prefHeight="704.0" prefWidth="587.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -32,24 +32,8 @@
                <content>
                   <TableView prefHeight="200.0" prefWidth="200.0">
                      <columns>
-<<<<<<< HEAD
                         <TableColumn prefWidth="72.0" text="ไอดี" />
                         <TableColumn prefWidth="302.0" text="วันที่ทำรายการ" />
-=======
-<<<<<<< HEAD
-                        <TableColumn prefWidth="72.0" text="ไอดี" />
-                        <TableColumn prefWidth="302.0" text="วันที่ทำรายการ" />
-=======
-<<<<<<< HEAD
-                        <TableColumn prefWidth="75.0" text="รหัสสินค้า" />
-                        <TableColumn prefWidth="285.0" text="ชื่อ" />
-                        <TableColumn minWidth="0.0" prefWidth="120.0" text="อนุมัติ(ปุ่ม)" />
-                        <TableColumn prefWidth="107.0" text="ไม่อนุมัติ(ปุ่ม)" />
-=======
-                        <TableColumn prefWidth="124.0" text="ไอดี" />
-                        <TableColumn prefWidth="250.0" text="วันที่ทำรายการ" />
->>>>>>> 8c2f4d26be49debff2e25beba951cd534b734385
->>>>>>> cbcb81eb2f9345ca508915697e0e04b2e6f0d8df
                         <TableColumn prefWidth="99.0" text="รายละเอียด" />
                         <TableColumn prefWidth="60.0" text="อนุมัติ" />
                         <TableColumn prefWidth="54.0" text="ไม่อนุมัติ" />
@@ -66,7 +50,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="declarationWait" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -86,7 +70,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="declarationConfirm" disable="true" layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
