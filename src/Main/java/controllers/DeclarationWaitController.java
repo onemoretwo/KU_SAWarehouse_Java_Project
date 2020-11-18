@@ -1,4 +1,6 @@
 package Main.java.controllers;
 
-public class DeclarationWaitController {
+import Main.java.contents.MenuBtn;
+
+public class DeclarationWaitController extends MenuBtn {
 }

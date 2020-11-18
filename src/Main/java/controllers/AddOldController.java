@@ -83,6 +83,13 @@ public class AddOldController extends MenuBtn implements Initializable {
                     td.setContentText("ระบุจำนวนสินค้าที่เพิ่ม : ");
                     Optional<String> result = td.showAndWait();
                     if (result.isPresent()){
+                        try {
+                            Integer.parseInt(result.get());
+                        }catch (NumberFormatException e){
+                            Alert alert = new Alert(Alert.AlertType.WARNING, "ข้อมูลไม่ถูกต้อง กรุณากรอกเฉพาะตัวเลข");
+                            alert.show();
+                            return;
+                        }
                         Button deleteButton = new Button();
                         deleteButton.setOnAction(new EventHandler<ActionEvent>() {
                             @Override
