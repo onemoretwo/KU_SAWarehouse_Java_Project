@@ -8,7 +8,7 @@ public class DBConnection {
 
     public DBConnection(){
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/sawarehouse?useSSL=false", "root", "");
 //            Statement statement = connection.createStatement();
 //            ResultSet rs = statement.executeQuery("SELECT * FROM categories");

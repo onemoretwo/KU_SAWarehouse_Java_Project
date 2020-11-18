@@ -8,50 +8,50 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.Home">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.Home">
    <children>
-      <AnchorPane layoutX="213.0" layoutY="5.0" prefHeight="699.0" prefWidth="588.0">
+      <AnchorPane layoutX="213.0" prefHeight="600.0" prefWidth="588.0">
          <children>
-            <Label layoutX="477.0" layoutY="14.0" text="admin" textFill="RED">
+            <Label layoutX="477.0" layoutY="14.0" text="admin" textAlignment="CENTER" textFill="RED">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <AnchorPane layoutX="35.0" layoutY="330.0" prefHeight="306.0" prefWidth="502.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 30 30 30 30;">
+            <AnchorPane layoutX="43.0" layoutY="242.0" prefHeight="306.0" prefWidth="502.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 30 30 30 30;">
                <children>
-                  <Label layoutX="80.0" layoutY="60.0" text="ชื่อ แอดมิน แอดมิน">
+                  <Label layoutX="80.0" layoutY="60.0" text="ชื่อ แอดมิน แอดมิน" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="80.0" layoutY="229.0" text="วันที่ลงทะเบียน : 16/11/2563">
+                  <Label layoutX="80.0" layoutY="229.0" text="วันที่ลงทะเบียน : 16/11/2563" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="80.0" layoutY="97.0" text="อายุ : 20 ปี">
+                  <Label layoutX="80.0" layoutY="97.0" text="อายุ : 20 ปี" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="80.0" layoutY="23.0" text="Username : admin01">
+                  <Label layoutX="80.0" layoutY="23.0" text="Username : admin01" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="80.0" layoutY="137.0" text="email : admin@sawarehouse.com">
+                  <Label layoutX="80.0" layoutY="137.0" text="email : admin@sawarehouse.com" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="80.0" layoutY="182.0" text="เบอร์โทรศัพท์ : 0812345678">
+                  <Label layoutX="80.0" layoutY="182.0" text="เบอร์โทรศัพท์ : 0812345678" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="207.0" layoutY="97.0" prefHeight="56.0" prefWidth="165.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 30 30 30 30;">
+            <AnchorPane layoutX="207.0" layoutY="44.0" prefHeight="56.0" prefWidth="165.0" style="-fx-background-color: #e6e6e6; -fx-background-radius: 30 30 30 30;">
                <children>
                   <ImageView fitHeight="174.0" fitWidth="181.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -62,29 +62,29 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Pane layoutY="-1.0" prefHeight="711.0" prefWidth="213.0" style="-fx-background-color: #3498db;">
+      <Pane prefHeight="600.0" prefWidth="214.0" style="-fx-background-color: #3498db;">
          <children>
-            <Button layoutY="655.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="56.0" prefWidth="213.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Logout" textFill="WHITE">
+            <Button layoutY="544.0" mnemonicParsing="false" onAction="#logoutBtn" prefHeight="55.0" prefWidth="214.0" styleClass="button2" stylesheets="@../css/fullpackstyling.css" text="Logout" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="ดูบัญชีทั้งหมด" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="195.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="ดูบัญชีทั้งหมด" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="299.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="สร้างบัญชีใหม่" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="สร้างบัญชีใหม่" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="370.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="301.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button layoutX="13.0" layoutY="46.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
+            <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
                <graphic>
                   <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -95,6 +95,5 @@
             </Button>
          </children>
       </Pane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

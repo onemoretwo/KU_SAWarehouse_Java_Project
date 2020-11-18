@@ -10,7 +10,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AddNewController">
+
    <children>
       <Pane layoutY="-7.0" prefHeight="600.0" prefWidth="213.0" style="-fx-background-color: #4287f5;">
          <children>
@@ -133,7 +135,9 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="declarationWait" layoutY="407.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
+
+            <Button fx:id="declarationWait" layoutY="407.0" mnemonicParsing="false" onAction="#declarationWait" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
+
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
