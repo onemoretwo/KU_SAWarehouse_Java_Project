@@ -85,8 +85,14 @@ public class RequisitionController extends MenuBtn implements Initializable {
                     td.setContentText("ระบุจำนวนสินค้าที่ต้องการเบิก : ");
                     Optional<String> result = td.showAndWait();
                     if (result.isPresent()){
-                        if (Integer.parseInt(result.get()) > product.getQuantity()){
-                            Alert alert = new Alert(Alert.AlertType.WARNING, "จำนวนสินค้าที่เบิกเกินจำนวนสินค้าที่มีอยู่\n\nโปรดระบุจำนวนที่ต้องการเบิกใหม่");
+                        try {
+                            if (Integer.parseInt(result.get()) > product.getQuantity()){
+                                Alert alert = new Alert(Alert.AlertType.WARNING, "จำนวนสินค้าที่เบิกเกินจำนวนสินค้าที่มีอยู่\n\nโปรดระบุจำนวนที่ต้องการเบิกใหม่");
+                                alert.show();
+                                return;
+                            }
+                        }catch (NumberFormatException e){
+                            Alert alert = new Alert(Alert.AlertType.WARNING, "ข้อมูลไม่ถูกต้อง กรุณากรอกเฉพาะตัวเลข");
                             alert.show();
                             return;
                         }
