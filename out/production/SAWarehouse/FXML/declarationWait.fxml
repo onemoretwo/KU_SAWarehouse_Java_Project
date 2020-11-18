@@ -21,7 +21,7 @@
       </TableView>
       <Pane layoutY="-3.0" prefHeight="711.0" prefWidth="213.0" style="-fx-background-color: #3498db;">
          <children>
-            <Button fx:id="allProductBtn" layoutY="439.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="439.0" mnemonicParsing="false" onAction="#allProductBtn" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
