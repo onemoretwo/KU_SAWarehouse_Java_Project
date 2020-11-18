@@ -9,23 +9,24 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.DeclarationWaitController">
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.DeclarationWaitController">
    <children>
-      <TableView layoutX="213.0" prefHeight="706.0" prefWidth="586.0">
+      <TableView fx:id="table" layoutX="213.0" prefHeight="706.0" prefWidth="586.0">
         <columns>
-            <TableColumn prefWidth="179.0" text="ไอดี" />
-          <TableColumn prefWidth="267.0" text="วันที่ทำรายการ" />
-            <TableColumn prefWidth="139.0" text="แสดงรายการ" />
+            <TableColumn fx:id="idCol" prefWidth="91.0" text="ไอดี" />
+          <TableColumn fx:id="timeStampCol" prefWidth="255.0" text="วันที่ทำรายการ" />
+            <TableColumn fx:id="typeCol" prefWidth="142.0" text="ประเภทรายการ" />
+            <TableColumn fx:id="btnCol" prefWidth="97.0" text="แสดงรายการ" />
         </columns>
       </TableView>
       <Pane layoutY="-3.0" prefHeight="711.0" prefWidth="213.0" style="-fx-background-color: #3498db;">
          <children>
-            <Button layoutY="439.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="allProductBtn" layoutY="439.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="declarationWait" disable="true" layoutY="490.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -35,27 +36,27 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="248.0" mnemonicParsing="false" onAction="#addNewBtn" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="299.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Button layoutY="299.0" mnemonicParsing="false" onAction="#addOldBtn" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="declarationConfirm" layoutY="541.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="370.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="370.0" mnemonicParsing="false" onAction="#requisitionBtn" prefHeight="40.0" prefWidth="213.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutX="13.0" layoutY="46.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
+            <Button layoutX="13.0" layoutY="46.0" mnemonicParsing="false" onAction="#homeBtn" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
                <graphic>
                   <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>
