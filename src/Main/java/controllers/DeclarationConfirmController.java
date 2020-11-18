@@ -1,4 +1,6 @@
 package Main.java.controllers;
 
-public class DeclarationConfirmController {
+import Main.java.contents.MenuBtn;
+
+public class DeclarationConfirmController extends MenuBtn {
 }

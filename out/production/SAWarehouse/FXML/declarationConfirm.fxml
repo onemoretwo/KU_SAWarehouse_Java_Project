@@ -19,10 +19,11 @@
                <content>
                   <TableView prefHeight="200.0" prefWidth="200.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="รหัสสินค้า" />
-                      <TableColumn prefWidth="285.0" text="ชื่อ" />
-                        <TableColumn prefWidth="120.0" text="อนุมัติ(ปุ่ม)" />
-                        <TableColumn prefWidth="107.0" text="ไม่อนุมัติ(ปุ่ม)" />
+                        <TableColumn prefWidth="124.0" text="ไอดี" />
+                        <TableColumn prefWidth="250.0" text="วันที่ทำรายการ" />
+                      <TableColumn prefWidth="99.0" text="รายละเอียด" />
+                        <TableColumn prefWidth="60.0" text="อนุมัติ" />
+                        <TableColumn prefWidth="54.0" text="ไม่อนุมัติ" />
                     </columns>
                   </TableView>
                </content>
@@ -31,10 +32,18 @@
                <content>
                   <TableView prefHeight="200.0" prefWidth="200.0">
                      <columns>
+<<<<<<< HEAD
                         <TableColumn prefWidth="75.0" text="รหัสสินค้า" />
                         <TableColumn prefWidth="285.0" text="ชื่อ" />
                         <TableColumn minWidth="0.0" prefWidth="120.0" text="อนุมัติ(ปุ่ม)" />
                         <TableColumn prefWidth="107.0" text="ไม่อนุมัติ(ปุ่ม)" />
+=======
+                        <TableColumn prefWidth="124.0" text="ไอดี" />
+                        <TableColumn prefWidth="250.0" text="วันที่ทำรายการ" />
+                        <TableColumn prefWidth="99.0" text="รายละเอียด" />
+                        <TableColumn prefWidth="60.0" text="อนุมัติ" />
+                        <TableColumn prefWidth="54.0" text="ไม่อนุมัติ" />
+>>>>>>> eb50ed42002a0deebceb66e1ba9ca86f57ec1445
                      </columns>
                   </TableView>
                </content>

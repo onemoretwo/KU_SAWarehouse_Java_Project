@@ -13,10 +13,9 @@
    <children>
       <TableView layoutX="213.0" prefHeight="706.0" prefWidth="586.0">
         <columns>
-            <TableColumn prefWidth="120.0" text="รูป" />
-          <TableColumn prefWidth="86.0" text="รหัสสินค้า" />
-          <TableColumn prefWidth="279.0" text="ชื่อสินค้า" />
-            <TableColumn prefWidth="100.0" text="สถานะ" />
+            <TableColumn prefWidth="179.0" text="ไอดี" />
+          <TableColumn prefWidth="267.0" text="วันที่ทำรายการ" />
+            <TableColumn prefWidth="139.0" text="แสดงรายการ" />
         </columns>
       </TableView>
       <Pane layoutY="-3.0" prefHeight="711.0" prefWidth="213.0" style="-fx-background-color: #3498db;">
