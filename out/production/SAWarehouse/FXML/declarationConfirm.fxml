@@ -19,8 +19,8 @@
                <content>
                   <TableView prefHeight="200.0" prefWidth="200.0">
                     <columns>
-                        <TableColumn prefWidth="124.0" text="ไอดี" />
-                        <TableColumn prefWidth="250.0" text="วันที่ทำรายการ" />
+                        <TableColumn prefWidth="71.0" text="ไอดี" />
+                        <TableColumn prefWidth="303.0" text="วันที่ทำรายการ" />
                       <TableColumn prefWidth="99.0" text="รายละเอียด" />
                         <TableColumn prefWidth="60.0" text="อนุมัติ" />
                         <TableColumn prefWidth="54.0" text="ไม่อนุมัติ" />
@@ -32,8 +32,8 @@
                <content>
                   <TableView prefHeight="200.0" prefWidth="200.0">
                      <columns>
-                        <TableColumn prefWidth="124.0" text="ไอดี" />
-                        <TableColumn prefWidth="250.0" text="วันที่ทำรายการ" />
+                        <TableColumn prefWidth="72.0" text="ไอดี" />
+                        <TableColumn prefWidth="302.0" text="วันที่ทำรายการ" />
                         <TableColumn prefWidth="99.0" text="รายละเอียด" />
                         <TableColumn prefWidth="60.0" text="อนุมัติ" />
                         <TableColumn prefWidth="54.0" text="ไม่อนุมัติ" />
