@@ -15,7 +15,7 @@
          <font>
             <Font size="14.0" />
          </font></TextField>
-      <Button layoutX="196.0" layoutY="289.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="35.0" prefWidth="286.0" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Login" textFill="WHITE">
+      <Button layoutX="196.0" layoutY="289.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="35.0" prefWidth="286.0" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="Login" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -25,11 +25,11 @@
             <Image url="@../images/logo.png" />
          </image>
       </ImageView>
-      <Button layoutX="527.0" layoutY="348.0" mnemonicParsing="false" style="-fx-background-radius: 5em;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="ผู้จัดทำ" textFill="WHITE">
+      <Button layoutX="527.0" layoutY="348.0" mnemonicParsing="false" style="-fx-background-radius: 5em;" styleClass="button3" stylesheets="@../css/fullpackstyling.css" text="ผู้จัดทำ" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Button>
-      <Label layoutX="93.0" layoutY="178.0" text="Username :" textFill="WHITE">
+      <Label layoutX="93.0" layoutY="178.0" text="Username :" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Label>
@@ -37,7 +37,7 @@
          <font>
             <Font size="14.0" />
          </font></PasswordField>
-      <Label layoutX="95.0" layoutY="233.0" text="Password :" textFill="WHITE">
+      <Label layoutX="95.0" layoutY="233.0" text="Password :" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
