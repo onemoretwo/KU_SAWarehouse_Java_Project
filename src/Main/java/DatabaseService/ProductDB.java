@@ -65,12 +65,21 @@ public class ProductDB extends DBConnection{
         return true;
     }
 
-    public void updateStock(int import_id){
+    public void updateStock(int id, boolean type){ // true for import false for export
         try {
+            String table;
+            String table_id;
+            if (type){
+                table = "importdetail";
+                table_id = "import_id";
+            } else{
+                table = "exportdetail";
+                table_id = "export_id";
+            }
             Statement stmt = connection.createStatement();
             PreparedStatement update = connection.prepareStatement("UPDATE products SET quantity = ? WHERE id = ?");
             Statement find = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM importdetail WHERE import_id="+import_id);
+            ResultSet rs = stmt.executeQuery("SELECT * FROM " + table + " WHERE " + table_id + " = "+ id);
             while (rs.next()){
                 String product_id = rs.getString("product_id");
                 int quantity = rs.getInt("quantity");
@@ -79,7 +88,8 @@ public class ProductDB extends DBConnection{
                 if (rsProduct.next()){
                     oldQuantity = rsProduct.getInt("quantity");
                 }
-                int totalQuantity = quantity + oldQuantity;
+                int totalQuantity;
+                if (type) totalQuantity = oldQuantity+quantity; else totalQuantity = oldQuantity-quantity;
                 update.setInt(1, totalQuantity);
                 update.setString(2, product_id);
                 update.executeUpdate();
@@ -91,4 +101,6 @@ public class ProductDB extends DBConnection{
             throwables.printStackTrace();
         }
     }
+
+
 }

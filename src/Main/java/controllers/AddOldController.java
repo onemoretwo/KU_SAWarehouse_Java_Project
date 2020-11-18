@@ -74,6 +74,7 @@ public class AddOldController extends MenuBtn implements Initializable {
         observableList.clear();
         for (Product product : list){
             Button button = new Button();
+            button.setText("เพิ่มสินค้า");
             button.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {

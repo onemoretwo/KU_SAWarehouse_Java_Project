@@ -64,6 +64,14 @@ public class Product {
         return 4;
     }
 
+    public void requisition(int quantity){
+        this.quantity -= quantity;
+    }
+
+    public void refund(int quantity){
+        this.quantity += quantity;
+    }
+
     public String getImgName() {
         return imgName;
     }

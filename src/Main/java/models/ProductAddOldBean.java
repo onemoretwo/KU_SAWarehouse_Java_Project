@@ -23,7 +23,6 @@ public class ProductAddOldBean {
         this.name = new SimpleStringProperty(product.getName());
         this.quantity = new SimpleIntegerProperty(product.getQuantity());
         this.button = button;
-        this.button.setText("เพิ่มสินค้า");
     }
 
     public ImageView getImg() {
