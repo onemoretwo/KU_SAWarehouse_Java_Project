@@ -3,12 +3,40 @@ package Main.java.DatabaseService;
 import Main.java.models.Declaration;
 import Main.java.models.Product;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
 public class DeclarationDB extends DBConnection{
+
+    public ArrayList<Declaration> getAllDeclaration(){
+        ArrayList<Declaration> list = new ArrayList<>();
+        try {
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM importdeclaration WHERE STATUS=1");
+            while (rs.next()){
+                int id = rs.getInt("id");
+                String myUsername = rs.getString("username");
+                String status = rs.getString("status");
+                String timestamp = rs.getTimestamp("created_at").toString();
+                list.add(new Declaration(id, myUsername, status, timestamp, "import"));
+            }
+            rs = stmt.executeQuery("SELECT * FROM exportdeclaration WHERE status=1");
+            while (rs.next()){
+                int id = rs.getInt("id");
+                String myUsername = rs.getString("username");
+                String status = rs.getString("status");
+                String timestamp = rs.getTimestamp("created_at").toString();
+                list.add(new Declaration(id, myUsername, status, timestamp, "export"));
+            }
+            stmt.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return list;
+    }
 
     public ArrayList<Declaration> getAllDeclarationByUser(String username){
         ArrayList<Declaration> list = new ArrayList<>();
@@ -53,5 +81,25 @@ public class DeclarationDB extends DBConnection{
             throwables.printStackTrace();
         }
         return list;
+    }
+
+    public void noClickUpdate(int id, String type){
+        String table = type+="declaration";
+        try {
+            Statement stmt = connection.createStatement();
+            stmt.executeUpdate("UPDATE " + table + " SET STATUS=3 WHERE id=" + id);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
+    public void yesClickUpdate(int id, String type){
+        String table = type+="declaration";
+        try {
+            Statement stmt = connection.createStatement();
+            stmt.executeUpdate("UPDATE " + table + " SET STATUS=2 WHERE id=" + id);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }

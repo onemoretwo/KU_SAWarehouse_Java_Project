@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -25,7 +26,9 @@ public class LoginController {
     public void loginBtn(ActionEvent event) throws IOException {
         User user = new UserDB().AuthorizeUser(fusername.getText(),fpassword.getText());
         if (user == null){
-            // Invalid username or password ***
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Invalid username or password\n\nPlease, try again");
+            alert.show();
+            return;
         }else{
             Main.currentUser = user;
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/home.fxml"));

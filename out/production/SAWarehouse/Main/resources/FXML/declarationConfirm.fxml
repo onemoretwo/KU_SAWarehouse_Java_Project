@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.DeclarationConfirmController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.DeclarationConfirmController">
    <children>
       <TabPane layoutX="213.0" prefHeight="600.0" prefWidth="587.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -45,7 +45,7 @@
       </TabPane>
       <Pane prefHeight="600.0" prefWidth="214.0" style="-fx-background-color: #3498db;">
          <children>
-            <Button layoutY="354.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="354.0" mnemonicParsing="false" onAction="#allProductBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -60,12 +60,12 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="195.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="195.0" mnemonicParsing="false" onAction="#addNewBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Button layoutY="248.0" mnemonicParsing="false" onAction="#addOldBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -75,7 +75,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="301.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="301.0" mnemonicParsing="false" onAction="#requisitionBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
