@@ -42,7 +42,20 @@ public class ProductDB extends DBConnection{
         return RStoAL(rs);
     }
 
-    public boolean createNewProduct(Product product){
+    public boolean isDuplicatedId(String id){
+        try {
+            Statement find = connection.createStatement();
+            ResultSet product = find.executeQuery("SELECT * FROM products WHERE id='" + id + "'");
+            if (product.next()){
+                return true;
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public void createNewProduct(Product product){
         try {
             PreparedStatement stmt = connection.prepareStatement("INSERT INTO products VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             stmt.setString(1, product.getId());
@@ -55,14 +68,12 @@ public class ProductDB extends DBConnection{
             stmt.setString(8, product.getShelf_id());
             stmt.setInt(9, product.getStatus());
             stmt.setString(10, product.getImgName());
-            boolean success = stmt.execute();
+            stmt.execute();
             stmt.close();
-            return success;
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return true;
     }
 
     public void updateStock(int id, boolean type){ // true for import false for export

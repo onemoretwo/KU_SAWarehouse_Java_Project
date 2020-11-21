@@ -13,10 +13,10 @@
    <children>
       <TableView fx:id="table" layoutX="213.0" prefHeight="600.0" prefWidth="586.0">
         <columns>
-            <TableColumn fx:id="idCol" prefWidth="91.0" text="ไอดี" />
-            <TableColumn fx:id="timeStampCol" prefWidth="255.0" text="วันที่ทำรายการ" />
-            <TableColumn fx:id="typeCol" prefWidth="142.0" text="ประเภทรายการ" />
-            <TableColumn fx:id="btnCol" prefWidth="97.0" text="แสดงรายการ" />
+            <TableColumn fx:id="idCol" prefWidth="91.0" style="-fx-alignment: CENTER;" text="ไอดี" />
+            <TableColumn fx:id="timeStampCol" prefWidth="255.0" style="-fx-alignment: CENTER;" text="วันที่ทำรายการ" />
+            <TableColumn fx:id="typeCol" prefWidth="142.0" style="-fx-alignment: CENTER;" text="ประเภทรายการ" />
+            <TableColumn fx:id="btnCol" prefWidth="97.0" style="-fx-alignment: CENTER;" text="แสดงรายการ" />
 
         </columns>
       </TableView>

@@ -10,8 +10,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +25,7 @@ public class HomeController extends MenuBtn implements Initializable {
     private Label srole, sname, susername, sage, semail, stelephoneNumber, screated_at;
     @FXML
     private Button declarationConfirm, declarationWait;
+    @FXML private ImageView myImg;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -31,6 +35,7 @@ public class HomeController extends MenuBtn implements Initializable {
             declarationWait.setVisible(false);
         }
         setUserDetail(Main.currentUser);
+        myImg.setImage(new Image(new File(getClass().getClassLoader().getResource("images/" +Main.currentUser.getImgName()).getPath()).toURI().toString()));
     }
 
     public void setUserDetail(User user){

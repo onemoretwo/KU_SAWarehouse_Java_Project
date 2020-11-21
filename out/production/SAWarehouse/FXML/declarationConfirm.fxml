@@ -19,11 +19,11 @@
                <content>
                   <TableView fx:id="importTable" prefHeight="200.0" prefWidth="200.0">
                     <columns>
-                        <TableColumn fx:id="idICol" prefWidth="142.0" text="ไอดี" />
-                        <TableColumn fx:id="timeICol" prefWidth="232.0" text="วันที่ทำรายการ" />
-                      <TableColumn fx:id="detailICol" prefWidth="99.0" text="รายละเอียด" />
-                        <TableColumn fx:id="yICol" prefWidth="60.0" text="อนุมัติ" />
-                        <TableColumn fx:id="nICol" prefWidth="54.0" text="ไม่อนุมัติ" />
+                        <TableColumn fx:id="idICol" prefWidth="142.0" style="-fx-alignment: CENTER;" text="ไอดี" />
+                        <TableColumn fx:id="timeICol" prefWidth="232.0" style="-fx-alignment: CENTER;" text="วันที่ทำรายการ" />
+                      <TableColumn fx:id="detailICol" prefWidth="99.0" style="-fx-alignment: CENTER;" text="รายละเอียด" />
+                        <TableColumn fx:id="yICol" prefWidth="60.0" style="-fx-alignment: CENTER;" text="อนุมัติ" />
+                        <TableColumn fx:id="nICol" prefWidth="54.0" style="-fx-alignment: CENTER;" text="ไม่อนุมัติ" />
                     </columns>
                   </TableView>
                </content>
@@ -32,11 +32,11 @@
                <content>
                   <TableView fx:id="exportTable" prefHeight="200.0" prefWidth="200.0">
                      <columns>
-                        <TableColumn fx:id="idECol" prefWidth="142.0" text="ไอดี" />
-                        <TableColumn fx:id="timeECol" prefWidth="232.0" text="วันที่ทำรายการ" />
-                        <TableColumn fx:id="detailECol" prefWidth="99.0" text="รายละเอียด" />
-                        <TableColumn fx:id="yECol" prefWidth="60.0" text="อนุมัติ" />
-                        <TableColumn fx:id="nECol" prefWidth="54.0" text="ไม่อนุมัติ" />
+                        <TableColumn fx:id="idECol" prefWidth="142.0" style="-fx-alignment: CENTER;" text="ไอดี" />
+                        <TableColumn fx:id="timeECol" prefWidth="232.0" style="-fx-alignment: CENTER;" text="วันที่ทำรายการ" />
+                        <TableColumn fx:id="detailECol" prefWidth="99.0" style="-fx-alignment: CENTER;" text="รายละเอียด" />
+                        <TableColumn fx:id="yECol" prefWidth="60.0" style="-fx-alignment: CENTER;" text="อนุมัติ" />
+                        <TableColumn fx:id="nECol" prefWidth="54.0" style="-fx-alignment: CENTER;" text="ไม่อนุมัติ" />
                      </columns>
                   </TableView>
                </content>

@@ -13,6 +13,7 @@ public class ProductAddOldBean {
     private SimpleStringProperty id;
     private SimpleStringProperty name;
     private SimpleIntegerProperty quantity;
+    private SimpleIntegerProperty safetyStock;
     private Button button;
 
     public ProductAddOldBean(Product product, Button button){
@@ -22,6 +23,7 @@ public class ProductAddOldBean {
         this.id = new SimpleStringProperty(product.getId());
         this.name = new SimpleStringProperty(product.getName());
         this.quantity = new SimpleIntegerProperty(product.getQuantity());
+        this.safetyStock = new SimpleIntegerProperty(product.getSaftyStock());
         this.button = button;
     }
 
@@ -51,6 +53,14 @@ public class ProductAddOldBean {
 
     public SimpleIntegerProperty quantityProperty() {
         return quantity;
+    }
+
+    public int getSafetyStock() {
+        return safetyStock.get();
+    }
+
+    public SimpleIntegerProperty safetyStockProperty() {
+        return safetyStock;
     }
 
     public Button getButton() {

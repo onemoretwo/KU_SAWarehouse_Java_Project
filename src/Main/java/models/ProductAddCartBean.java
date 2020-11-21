@@ -25,7 +25,7 @@ public class ProductAddCartBean {
         this.name = new SimpleStringProperty(product.getName());
         this.quantity = new SimpleIntegerProperty(quantity);
         this.button = button;
-        this.button.setText("ลบรายการ");
+        this.button.setText("ลบ");
     }
 
     public String getId() {

@@ -37,7 +37,7 @@ public class AddOldController extends MenuBtn implements Initializable {
     @FXML private TableView aTable,bTable;
     @FXML private TableColumn<ProductAddOldBean, String> idACol, nameACol, nameBCol;
     @FXML private TableColumn<ProductAddOldBean, ImageView> imgACol, imgBCol;
-    @FXML private TableColumn<ProductAddOldBean, Integer> quantityACol, quantityBCol;
+    @FXML private TableColumn<ProductAddOldBean, Integer> quantityACol, quantityBCol, ssCol;
     @FXML private TableColumn<ProductAddOldBean, Button> btnACol, btnBCol;
     @FXML private Button declarationConfirm, declarationWait;
 
@@ -59,6 +59,7 @@ public class AddOldController extends MenuBtn implements Initializable {
         idACol.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameACol.setCellValueFactory(new PropertyValueFactory<>("name"));
         quantityACol.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        ssCol.setCellValueFactory(new PropertyValueFactory<>("safetyStock"));
         btnACol.setCellValueFactory(new PropertyValueFactory<>("button"));
 
         //Table B
@@ -74,7 +75,7 @@ public class AddOldController extends MenuBtn implements Initializable {
         observableList.clear();
         for (Product product : list){
             Button button = new Button();
-            button.setText("เพิ่มสินค้า");
+            button.setText("เพิ่ม");
             button.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
@@ -83,10 +84,17 @@ public class AddOldController extends MenuBtn implements Initializable {
                     td.setContentText("ระบุจำนวนสินค้าที่เพิ่ม : ");
                     Optional<String> result = td.showAndWait();
                     if (result.isPresent()){
+                        Alert alert;
+                        int amount;
                         try {
-                            Integer.parseInt(result.get());
+                            amount = Integer.parseInt(result.get());
                         }catch (NumberFormatException e){
-                            Alert alert = new Alert(Alert.AlertType.WARNING, "ข้อมูลไม่ถูกต้อง กรุณากรอกเฉพาะตัวเลข");
+                            alert = new Alert(Alert.AlertType.WARNING, "กรอกข้อมูลไม่ถูกต้อง");
+                            alert.show();
+                            return;
+                        }
+                        if (amount <= 0 ){
+                            alert = new Alert(Alert.AlertType.WARNING, "ข้อมูลไม่ถูกต้อง จำนวนต้องมากกว่า 0");
                             alert.show();
                             return;
                         }

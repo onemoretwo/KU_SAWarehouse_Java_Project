@@ -41,7 +41,7 @@ public class RequisitionController extends MenuBtn implements Initializable {
     @FXML
     TableColumn<ProductAddOldBean, String> idACol, nameACol, nameBCol;
     @FXML private TableColumn<ProductAddOldBean, ImageView> imgACol, imgBCol;
-    @FXML private TableColumn<ProductAddOldBean, Integer> quantityACol, quantityBCol;
+    @FXML private TableColumn<ProductAddOldBean, Integer> quantityACol, quantityBCol, ssCol;
     @FXML private TableColumn<ProductAddOldBean, Button> btnACol, btnBCol;
 
     @Override
@@ -61,6 +61,7 @@ public class RequisitionController extends MenuBtn implements Initializable {
         idACol.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameACol.setCellValueFactory(new PropertyValueFactory<>("name"));
         quantityACol.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        ssCol.setCellValueFactory(new PropertyValueFactory<>("SafetyStock"));
         btnACol.setCellValueFactory(new PropertyValueFactory<>("button"));
 
         //Table B
@@ -76,7 +77,7 @@ public class RequisitionController extends MenuBtn implements Initializable {
         observableList.clear();
         for (Product product : list){
             Button button = new Button();
-            button.setText("เบิกสินค้า");
+            button.setText("เบิก");
             button.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
@@ -86,13 +87,20 @@ public class RequisitionController extends MenuBtn implements Initializable {
                     Optional<String> result = td.showAndWait();
                     if (result.isPresent()){
                         try {
-                            if (Integer.parseInt(result.get()) > product.getQuantity()){
+                            int amount;
+                            amount = Integer.parseInt(result.get());
+                            if (amount <= 0){
+                                Alert alert = new Alert(Alert.AlertType.WARNING, "ข้อมูลไม่ถูกต้อง จำนวนต้องมากกว่า 0");
+                                alert.show();
+                                return;
+                            }
+                            if (amount > product.getQuantity()){
                                 Alert alert = new Alert(Alert.AlertType.WARNING, "จำนวนสินค้าที่เบิกเกินจำนวนสินค้าที่มีอยู่\n\nโปรดระบุจำนวนที่ต้องการเบิกใหม่");
                                 alert.show();
                                 return;
                             }
                         }catch (NumberFormatException e){
-                            Alert alert = new Alert(Alert.AlertType.WARNING, "ข้อมูลไม่ถูกต้อง กรุณากรอกเฉพาะตัวเลข");
+                            Alert alert = new Alert(Alert.AlertType.WARNING, "กรอกข้อมูลไม่ถูกต้อง");
                             alert.show();
                             return;
                         }

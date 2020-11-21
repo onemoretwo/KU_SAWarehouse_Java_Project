@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AddOldController">
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.java.controllers.AddOldController">
 
    <children>
       <Button layoutX="804.0" layoutY="526.0" mnemonicParsing="false" onAction="#submitBtn" prefHeight="73.0" prefWidth="297.0" styleClass="button4" stylesheets="@../css/fullpackstyling.css" text="ยืนยัน" textAlignment="CENTER" textFill="WHITE">
@@ -25,19 +25,20 @@
       </Label>
       <TableView fx:id="aTable" layoutX="213.0" prefHeight="600.0" prefWidth="591.0">
         <columns>
-          <TableColumn fx:id="imgACol" prefWidth="138.0" text="รูป" />
-            <TableColumn fx:id="idACol" prefWidth="108.0" text="รหัสสินค้า" />
-          <TableColumn fx:id="nameACol" prefWidth="164.0" text="ชื่อ" />
-            <TableColumn fx:id="quantityACol" prefWidth="88.66668701171875" text="จำนวน" />
-            <TableColumn fx:id="btnACol" prefWidth="95.33331298828125" text="เพิ่มสินค้า(ปุ่ม)" />
+          <TableColumn fx:id="imgACol" prefWidth="127.33334350585938" style="-fx-alignment: CENTER;" text="รูป" />
+            <TableColumn fx:id="idACol" prefWidth="92.33331298828125" style="-fx-alignment: CENTER;" text="รหัสสินค้า" />
+          <TableColumn fx:id="nameACol" prefWidth="158.0" style="-fx-alignment: CENTER;" text="ชื่อ" />
+            <TableColumn fx:id="quantityACol" prefWidth="70.0" style="-fx-alignment: CENTER;" text="จำนวน" />
+            <TableColumn fx:id="ssCol" prefWidth="76.6666259765625" style="-fx-alignment: CENTER;" text="safety stock" />
+            <TableColumn fx:id="btnACol" prefWidth="64.0" style="-fx-alignment: CENTER;" />
         </columns>
       </TableView>
       <TableView fx:id="bTable" layoutX="803.0" layoutY="42.0" prefHeight="485.0" prefWidth="298.0">
         <columns>
-          <TableColumn fx:id="imgBCol" prefWidth="94.0" text="รูป" />
-          <TableColumn fx:id="nameBCol" prefWidth="91.0" text="ชื่อ" />
-            <TableColumn fx:id="quantityBCol" prefWidth="67.0" text="จำนวน" />
-            <TableColumn fx:id="btnBCol" prefWidth="50.0" />
+          <TableColumn fx:id="imgBCol" prefWidth="94.0" style="-fx-alignment: CENTER;" text="รูป" />
+          <TableColumn fx:id="nameBCol" prefWidth="91.0" style="-fx-alignment: CENTER;" text="ชื่อ" />
+            <TableColumn fx:id="quantityBCol" prefWidth="67.0" style="-fx-alignment: CENTER;" text="จำนวน" />
+            <TableColumn fx:id="btnBCol" prefWidth="50.0" style="-fx-alignment: CENTER;" />
         </columns>
       </TableView>
       <Pane layoutY="-3.0" prefHeight="600.0" prefWidth="214.0" style="-fx-background-color: #3498db;">
