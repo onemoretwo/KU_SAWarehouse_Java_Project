@@ -113,5 +113,22 @@ public class ProductDB extends DBConnection{
         }
     }
 
+    public ArrayList<Product> getProduct(String keyword, String orderBy, boolean upDown){
+        ArrayList<Product> products = null;
+        ResultSet rs = null;
+        try {
+            Statement stmt = connection.createStatement();
+            String sql = "SELECT * FROM products WHERE name LIKE '%" + keyword + "%' OR id like '%" + keyword + "%' ORDER BY " + orderBy + " ";
+            if (upDown){
+                sql += "DESC";
+            }
+            rs = stmt.executeQuery(sql);
+            products = RStoAL(rs);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return products;
+    }
+
 
 }

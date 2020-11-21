@@ -8,12 +8,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class AllProductController implements Initializable {
@@ -23,6 +23,11 @@ public class AllProductController implements Initializable {
 
     @FXML
     TableView productTable;
+    @FXML
+    TextField fsearch;
+    @FXML
+    ComboBox<String> orderBy;
+    @FXML ToggleButton upDown;
     @FXML
     TableColumn<ProductBean, String> idCol, nameCol, unitCol, shelf_idCol;
     @FXML TableColumn<ProductBean, Double> priceCol;
@@ -36,6 +41,10 @@ public class AllProductController implements Initializable {
             public void run() {
                 productDB = new ProductDB();
                 observableList = FXCollections.observableArrayList();
+                orderBy.getItems().add("id");
+                orderBy.getItems().add("price");
+                orderBy.getItems().add("quantity");
+                orderBy.getSelectionModel().selectFirst();
                 idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
                 nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
                 priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
@@ -45,14 +54,27 @@ public class AllProductController implements Initializable {
                 shelf_idCol.setCellValueFactory(new PropertyValueFactory<>("shelf_id"));
                 imgCol.setCellValueFactory(new PropertyValueFactory<>("img"));
 
-                show();
+                show(productDB.getAllProduct());
             }
         });
     }
 
-    private void show(){
+    @FXML
+    public void search(){
+        String keyword = fsearch.getText().trim();
+        show(productDB.getProduct(keyword, orderBy.getSelectionModel().getSelectedItem(), upDown.isSelected()));
+    }
+
+    @FXML
+    public void toggleUpDown(){
+        if (upDown.isSelected()){
+            upDown.setText("▲");
+        }else upDown.setText("▼");
+    }
+
+    private void show(ArrayList<Product> products){
         observableList.clear();
-        for (Product product : productDB.getAllProduct()){
+        for (Product product : products){
             observableList.add(new ProductBean(product));
         }
         productTable.setItems(observableList);
