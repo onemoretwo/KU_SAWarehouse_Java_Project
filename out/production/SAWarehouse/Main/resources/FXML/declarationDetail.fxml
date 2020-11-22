@@ -17,9 +17,12 @@
 
       <TableView fx:id="table" layoutX="45.0" layoutY="69.0" prefHeight="500.0" prefWidth="821.0">
          <columns>
-       <TableColumn fx:id="idCol" prefWidth="235.0" text="รหัสสินค้า" />
-       <TableColumn fx:id="nameCol" prefWidth="350.0" text="ชื่อสินค้า" />
-       <TableColumn fx:id="quantityCol" prefWidth="235.0" text="จำวนวน" />
+            <TableColumn fx:id="imgCol" prefWidth="148.66665649414062" style="-fx-alignment: CENTER;" text="รูป" />
+       <TableColumn fx:id="idCol" prefWidth="140.33334350585938" style="-fx-alignment: CENTER;" text="รหัสสินค้า" />
+       <TableColumn fx:id="nameCol" prefWidth="283.0" style="-fx-alignment: CENTER-LEFT;" text="ชื่อสินค้า" />
+       <TableColumn fx:id="quantityCol" prefWidth="100.0" style="-fx-alignment: CENTER;" text="จำวนวนที่เบิก" />
+            <TableColumn fx:id="actualCol" prefWidth="100.0" style="-fx-alignment: CENTER;" text="คงเหลือคลัง" />
+            <TableColumn fx:id="warnCol" prefWidth="33.3333740234375" style="-fx-alignment: CENTER;" />
 
          </columns>
       </TableView>

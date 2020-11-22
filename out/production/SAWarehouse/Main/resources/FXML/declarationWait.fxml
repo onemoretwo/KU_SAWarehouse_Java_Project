@@ -23,7 +23,7 @@
       <Pane prefHeight="600.0" prefWidth="214.0" style="-fx-background-color: #3498db;">
          <children>
 
-            <Button layoutY="354.0" mnemonicParsing="false" onAction="#allProductBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เช็คของ" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="354.0" mnemonicParsing="false" onAction="#allProductBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="ค้นหาสินค้า" textAlignment="CENTER" textFill="WHITE">
 
                <font>
                   <Font name="System Bold" size="20.0" />

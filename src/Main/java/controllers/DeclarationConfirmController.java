@@ -72,9 +72,7 @@ public class DeclarationConfirmController extends MenuBtn implements Initializab
         ArrayList<Declaration> list = declarationDB.getAllDeclaration();
         for (Declaration d : list){
             Button detailBtn = new Button();
-            Button yesBtn = new Button();
             Button noBtn = new Button();
-            yesBtn.setText("Yes");
             noBtn.setText("No");
             detailBtn.setText("แสดงรายละเอียด");
             detailBtn.setOnAction(new EventHandler<ActionEvent>() {
@@ -107,20 +105,26 @@ public class DeclarationConfirmController extends MenuBtn implements Initializab
 
                 }
             });
-            yesBtn.setOnAction(new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"ยืนยัน ไม่อนุมัติ รายการนี้หรือไม่");
-                    Optional<ButtonType> result = alert.showAndWait();
-                    if (result.get() == ButtonType.CANCEL)
-                        return;
-                    Boolean type;
-                    if (d.getType().equals("import")) type=true; else type =false;
-                    new ProductDB().updateStock(d.getId(), type);
-                    declarationDB.yesClickUpdate(d.getId(), d.getType());
-                    show();
-                }
-            });
+            Button yesBtn = new Button();
+            yesBtn.setText("Yes");
+            if (d.getType().equals("import") || declarationDB.canExport(d.getId())){
+                yesBtn.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"ยืนยัน ไม่อนุมัติ รายการนี้หรือไม่");
+                        Optional<ButtonType> result = alert.showAndWait();
+                        if (result.get() == ButtonType.CANCEL)
+                            return;
+                        Boolean type;
+                        if (d.getType().equals("import")) type=true; else type =false;
+                        new ProductDB().updateStock(d.getId(), type);
+                        declarationDB.yesClickUpdate(d.getId(), d.getType());
+                        show();
+                    }
+                });
+            }else {
+                yesBtn.setDisable(true);
+            }
             if (d.getType().equals("import")){
                 importList.add(new DeclarationConfirmBean(d.getId(), d.getTimestamp(), detailBtn, yesBtn, noBtn));
             }else if (d.getType().equals("export")){

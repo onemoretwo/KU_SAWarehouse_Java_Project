@@ -11,8 +11,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -27,8 +30,9 @@ public class DeclarationDetailController implements Initializable {
     @FXML
     TableView table;
     @FXML
-    TableColumn<DeclarationDetailBean, String> idCol, nameCol;
-    @FXML TableColumn<DeclarationDetailBean, Integer> quantityCol;
+    TableColumn<DeclarationDetailBean, String> idCol, nameCol, warnCol;
+    @FXML TableColumn<DeclarationDetailBean, Integer> quantityCol, actualCol;
+    @FXML TableColumn<DeclarationDetailBean, ImageView> imgCol;
 
     public void setUp(int id, String type){
         this.declaration_id = id;
@@ -40,9 +44,16 @@ public class DeclarationDetailController implements Initializable {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
+                imgCol.setCellValueFactory(new PropertyValueFactory<>("img"));
                 idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
                 nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
                 quantityCol.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+                actualCol.setCellValueFactory(new PropertyValueFactory<>("actual"));
+                warnCol.setCellValueFactory(new PropertyValueFactory<>("warning"));
+
+                if (type.equals("import")){
+                    quantityCol.setText("จำนวนที่เพิ่ม");
+                }else quantityCol.setText("จำนวนที่เบิก");
 
                 observableList = FXCollections.observableArrayList();
                 declarationDB = new DeclarationDB();
@@ -53,9 +64,19 @@ public class DeclarationDetailController implements Initializable {
     }
 
     public void show(){
-        ArrayList<Product> list = declarationDB.getDeclarationDetail(declaration_id, type);
-        for (Product p : list){
-            observableList.add(new DeclarationDetailBean(p.getId(), p.getName(), p.getQuantity()));
+        ResultSet rs = declarationDB.getDeclarationDetail(declaration_id, type);
+        try {
+            while (rs.next()) {
+                String imgName = rs.getString("imgName");
+                String id = rs.getString("id");
+                String name = rs.getString("name");
+                int quantity = rs.getInt("quantity");
+                int actual = rs.getInt("actual");
+                Product product = new Product(imgName, id, name, quantity);
+                observableList.add(new DeclarationDetailBean(product, actual, type));
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
         }
         table.setItems(observableList);
     }
