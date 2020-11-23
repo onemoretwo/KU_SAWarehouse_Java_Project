@@ -80,7 +80,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
+            <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#homeBtn" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
                <graphic>
                   <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>

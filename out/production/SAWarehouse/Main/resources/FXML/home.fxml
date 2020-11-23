@@ -104,13 +104,13 @@
       </AnchorPane>
       <Pane prefHeight="600.0" prefWidth="214.0" style="-fx-background-color: #3498db;">
          <children>
-            <Button layoutY="354.0" mnemonicParsing="false" onAction="#allProductBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="ค้นหาสินค้า" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="324.0" mnemonicParsing="false" onAction="#allProductBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="ค้นหาสินค้า" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
 
-            <Button fx:id="declarationWait" layoutY="407.0" mnemonicParsing="false" onAction="#declarationWait" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="declarationWait" layoutY="377.0" mnemonicParsing="false" onAction="#declarationWait" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการรออนุมัติ" textAlignment="CENTER" textFill="WHITE">
 
                <font>
                   <Font name="System Bold" size="20.0" />
@@ -121,34 +121,39 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="195.0" mnemonicParsing="false" onAction="#addNewBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="165.0" mnemonicParsing="false" onAction="#addNewBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าใหม่" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="248.0" mnemonicParsing="false" onAction="#addOldBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Button layoutY="218.0" mnemonicParsing="false" onAction="#addOldBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="เพิ่มสินค้าเดิม" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="declarationConfirm" layoutY="460.0" mnemonicParsing="false" onAction="#declarationConfirm" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="declarationConfirm" layoutY="430.0" mnemonicParsing="false" onAction="#declarationConfirm" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="รายการต้องอนุมัติ" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutY="301.0" mnemonicParsing="false" onAction="#requisitionBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="271.0" mnemonicParsing="false" onAction="#requisitionBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="นำสินค้าออก" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="174.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
+            <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="141.0" prefWidth="188.0" styleClass="home" stylesheets="@../css/fullpackstyling.css">
                <graphic>
-                  <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="121.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../images/logo_min.png" />
                      </image>
                   </ImageView>
                </graphic>
+            </Button>
+            <Button layoutY="486.0" mnemonicParsing="false" onAction="#reportBtn" prefHeight="40.0" prefWidth="214.0" styleClass="button1" stylesheets="@../css/fullpackstyling.css" text="ดูรายงาน" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
             </Button>
          </children>
       </Pane>
